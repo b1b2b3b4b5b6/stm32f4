@@ -1,8 +1,12 @@
 # Object files
+object/
 *.o
+*.d
+*.crf
 *.ko
 *.obj
 *.elf
+*.map
 
 # Precompiled Headers
 *.gch
@@ -29,7 +33,12 @@
 *.hex
 
 # Debug files
+Debug/
 *.dSYM/
+
+#Document
+Doc/
+doc/
 
 # =========================
 # Operating System Files

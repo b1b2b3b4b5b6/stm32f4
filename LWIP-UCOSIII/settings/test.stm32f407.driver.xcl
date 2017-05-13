@@ -1,0 +1,27 @@
+ -B 
+
+"--endian=little" 
+
+"--cpu=Cortex-M4" 
+
+"--fpu=VFPv4_SP" 
+
+"-p" 
+
+"D:\IAR Systems_WIN10\Embedded Workbench 7.2\arm\CONFIG\debugger\ST\STM32F407VE.ddf" 
+
+"--drv_verify_download" 
+
+"--semihosting" 
+
+"--device=STM32F407VE" 
+
+"--drv_interface=SWD" 
+
+"--stlink_reset_strategy=0,0" 
+
+"--drv_swo_clock_setup=72000000,1,2000000" 
+
+
+
+

@@ -1,0 +1,15 @@
+"D:\IAR Systems_WIN10\Embedded Workbench 7.2\arm\bin\armproc.dll" 
+
+"D:\IAR Systems_WIN10\Embedded Workbench 7.2\arm\bin\armstlink.dll" 
+
+"C:\Users\god\Desktop\LWIP-UCOSIII\object\stm32f407\Exe\test.out" 
+
+--plugin "D:\IAR Systems_WIN10\Embedded Workbench 7.2\arm\bin\armbat.dll" 
+
+--device_macro "D:\IAR Systems_WIN10\Embedded Workbench 7.2\arm\config\debugger\ST\STM32F4xx.dmac" 
+
+--flash_loader "D:\IAR Systems_WIN10\Embedded Workbench 7.2\arm\config\flashloader\ST\FlashSTM32F4xxx.board" 
+
+
+
+

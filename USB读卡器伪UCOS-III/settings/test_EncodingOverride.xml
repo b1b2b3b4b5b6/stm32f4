@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<userOverrides>
+  <override>
+    <path>C:\Users\god\Desktop\ENC28J60\EMWIN\Demo\demo.c</path>
+    <encoding>System</encoding>
+  </override>
+  <override>
+    <path>C:\Users\god\Desktop\ENC28J60\EMWIN\XBF_FONT\usart.c</path>
+    <encoding>System</encoding>
+  </override>
+  <override>
+    <path>C:\Users\god\Desktop\ENC28J60\LWIP\lwip_app\lwip_comm\lwip_comm.c</path>
+    <encoding>UTF-8</encoding>
+  </override>
+  <override>
+    <path>C:\Users\god\Desktop\ENC28J60\LWIP\lwip_app\lwip_comm\lwipopts.h</path>
+    <encoding>System</encoding>
+  </override>
+  <override>
+    <path>C:\Users\god\Desktop\ENC28J60\user\enc28j60.c</path>
+    <encoding>UTF-8</encoding>
+  </override>
+  <override>
+    <path>C:\Users\god\Desktop\ENC28J60\user\main.c</path>
+    <encoding>UTF-8</encoding>
+  </override>
+</userOverrides>
+
+

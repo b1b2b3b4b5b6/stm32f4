@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC32.C</ToolchainName>
+    <ProjectGuid>{c901371b-7f05-4507-a3d5-54bf0482de25}</ProjectGuid>
+    <avrdevice>AT32UC3A4128</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>GccApplication1</AssemblyName>
+    <Name>GccApplication1</Name>
+    <RootNamespace>GccApplication1</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.26.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <Avr32Gcc>
+        <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+        <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+        <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+        <avr32gcc.common.outputfiles.srec>True</avr32gcc.common.outputfiles.srec>
+        <avr32gcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avr32gcc.compiler.symbols.DefSymbols>
+        <avr32gcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.51\include\AT32UC3A4128</Value>
+          </ListValues>
+        </avr32gcc.compiler.directories.IncludePaths>
+        <avr32gcc.compiler.optimization.level>Optimize for size (-Os)</avr32gcc.compiler.optimization.level>
+        <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+        <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+        <avr32gcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avr32gcc.linker.libraries.Libraries>
+        <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+        <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+        <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+        <avr32gcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.51\include\AT32UC3A4128</Value>
+          </ListValues>
+        </avr32gcc.assembler.general.IncludePaths>
+        <avr32gcc.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.51\include\AT32UC3A4128</Value>
+          </ListValues>
+        </avr32gcc.preprocessingassembler.general.IncludePaths>
+      </Avr32Gcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <Avr32Gcc>
+        <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+        <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+        <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+        <avr32gcc.common.outputfiles.srec>True</avr32gcc.common.outputfiles.srec>
+        <avr32gcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>STM32F10X_MD,USE_STDPERIPH_DRIVER</Value>
+          </ListValues>
+        </avr32gcc.compiler.symbols.DefSymbols>
+        <avr32gcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../library/inc</Value>
+            <Value>../startup</Value>
+            <Value>../cmsic</Value>
+            <Value>../user</Value>
+            <Value>../drive</Value>
+            <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.51\include\AT32UC3A4128</Value>
+          </ListValues>
+        </avr32gcc.compiler.directories.IncludePaths>
+        <avr32gcc.compiler.optimization.level>Optimize (-O1)</avr32gcc.compiler.optimization.level>
+        <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+        <avr32gcc.compiler.optimization.DebugLevel>Maximum (-g3)</avr32gcc.compiler.optimization.DebugLevel>
+        <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+        <avr32gcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avr32gcc.linker.libraries.Libraries>
+        <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+        <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+        <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+        <avr32gcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.51\include\AT32UC3A4128</Value>
+          </ListValues>
+        </avr32gcc.assembler.general.IncludePaths>
+        <avr32gcc.assembler.debugging.DebugLevel>Default (-g)</avr32gcc.assembler.debugging.DebugLevel>
+        <avr32gcc.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\UC3A_DFP\1.0.51\include\AT32UC3A4128</Value>
+          </ListValues>
+        </avr32gcc.preprocessingassembler.general.IncludePaths>
+        <avr32gcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</avr32gcc.preprocessingassembler.debugging.DebugLevel>
+      </Avr32Gcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="drive" />
+    <Folder Include="cmsic" />
+    <Folder Include="EMWIN\Demo" />
+    <Folder Include="EMWIN\STemWin" />
+    <Folder Include="EMWIN\STemWin\Config" />
+    <Folder Include="EMWIN\STemWin\inc" />
+    <Folder Include="EMWIN\STemWin\Lib" />
+    <Folder Include="EMWIN\STemWin\OS" />
+    <Folder Include="library" />
+    <Folder Include="jpg" />
+    <Folder Include="EMWIN" />
+    <Folder Include="UCOS-III" />
+    <Folder Include="startup" />
+    <Folder Include="UCOS-III\uCOS-III" />
+    <Folder Include="UCOS-III\uCOS-III\Ports" />
+    <Folder Include="UCOS-III\uCOS-III\Source" />
+    <Folder Include="UCOS-III\uCOS_CONFIG" />
+    <Folder Include="UCOS-III\UCOS_BSP" />
+    <Folder Include="UCOS-III\uC-LIB" />
+    <Folder Include="UCOS-III\uC-CPU" />
+    <Folder Include="user" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cmsic\system_stm32f4xx.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drive\led.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drive\led.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EMWIN\Demo\demo.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EMWIN\Demo\graphy.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EMWIN\STemWin\Config\GUIConf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EMWIN\STemWin\Config\GUIDRV_Template.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EMWIN\STemWin\Config\GUI_X_Touch_Analog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EMWIN\STemWin\Config\LCDConf_FlexColor_Template.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EMWIN\STemWin\Config\LCDConf_Lin_Template.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EMWIN\STemWin\Config\SIMConf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EMWIN\STemWin\OS\GUI_X_OS.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\cderror.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\cdjpeg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\example.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jaricom.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jcomapi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jconfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdapimin.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdapistd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdarith.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdatadst.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdatasrc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdcoefct.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdcolor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdct.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jddctmgr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdhuff.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdinput.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdmainct.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdmarker.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdmaster.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdmerge.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdpostct.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdsample.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jdtrans.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jerror.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jerror.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jfdctflt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jfdctfst.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jfdctint.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jidctflt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jidctfst.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jidctint.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jinclude.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jmemmgr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jmemsys.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jmorecfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jpegint.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jpeglib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jquant1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jquant2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jutils.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\jversion.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="jpg\transupp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\misc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_can.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_crc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_cryp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_cryp_aes.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_cryp_des.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_cryp_tdes.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_dac.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_dbgmcu.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_dcmi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_dma.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_dma2d.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_exti.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_flash.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_fsmc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_gpio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_hash.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_hash_md5.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_hash_sha1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_i2c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_iwdg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_ltdc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_pwr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_rcc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_rng.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_rtc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_sai.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_sdio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_syscfg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_tim.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_usart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="library\stm32f4xx_wwdg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="startup\startup_stm32f40_41xxx.s">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-CPU\cpu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-CPU\cpu_c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-CPU\cpu_core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-CPU\cpu_core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-CPU\cpu_def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-LIB\lib_ascii.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-LIB\lib_ascii.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-LIB\lib_def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-LIB\lib_math.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-LIB\lib_math.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-LIB\lib_mem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-LIB\lib_mem.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-LIB\lib_str.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uC-LIB\lib_str.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Ports\os_cpu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Ports\os_cpu_c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_cfg_app.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_dbg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_flag.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_int.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_mem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_msg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_mutex.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_pend_multi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_prio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_q.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_sem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_stat.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_task.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_tick.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_time.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_tmr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_type.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS-III\Source\os_var.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\UCOS_BSP\bsp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\UCOS_BSP\bsp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS_CONFIG\app_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS_CONFIG\cpu_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS_CONFIG\includes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS_CONFIG\lib_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS_CONFIG\os_app_hooks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS_CONFIG\os_app_hooks.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS_CONFIG\os_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UCOS-III\uCOS_CONFIG\os_cfg_app.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\adc_sample.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\delay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\diskio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\enc28j60.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\exfuns.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\ff.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\ili9325.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\malloc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\sdio_sdcard.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\stm32f4xx_it.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\sys.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="user\xpt2046.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EMWIN\STemWin\Lib\STemWin528_CM4_OS_IAR.a">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="UCOS-III\uC-CPU\cpu_a.asm">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="UCOS-III\uC-LIB\lib_mem_a.asm">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="UCOS-III\uCOS-III\Ports\os_cpu_a.asm">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

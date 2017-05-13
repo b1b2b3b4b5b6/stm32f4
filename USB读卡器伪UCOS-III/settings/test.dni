@@ -1,0 +1,111 @@
+[stlink]
+stlinkserialNo=1B8E3752
+stlinkfoundProbes=
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[SWOTraceHWSettings]
+OverrideDefaultClocks=0
+CpuClock=72000000
+ClockAutoDetect=1
+ClockWanted=2000000
+JtagSpeed=2000000
+Prescaler=36
+TimeStampPrescIndex=0
+TimeStampPrescData=0
+PcSampCYCTAP=1
+PcSampPOSTCNT=15
+PcSampIndex=0
+DataLogMode=0
+ITMportsEnable=0
+ITMportsTermIO=0
+ITMportsLogFile=0
+ITMlogFile=$PROJ_DIR$\ITM.log
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[DebugChecksum]
+Checksum=1179286881
+[CodeCoverage]
+Enabled=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[array_types]
+Fmt0=u8[4096]	4	0
+Fmt1=unsigned char[300]	4	0
+Fmt2=unsigned char[400]	4	0
+[watch_formats]
+Fmt0={W}1:*(pBuffer+0)	4	0
+Fmt1={W}1:*(pBuffer+1)	4	0
+Fmt2={W}1:*(pBuffer+2)	4	0
+Fmt3={W}1:*(pBuffer+3)	4	0
+Fmt4={W}1:*(pBuffer+4)	4	0
+Fmt5={W}1:data	0	1
+[Trace2]
+Enabled=0
+ShowSource=0
+[SWOTraceWindow]
+PcSampling=0
+InterruptLogs=0
+ForcedTimeStamps=0
+EventCPI=0
+EventEXC=0
+EventFOLD=0
+EventLSU=0
+EventSLEEP=0
+[DataLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+SumEnabled=0
+ShowTimeSum=1
+[InterruptLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+SumEnabled=0
+ShowTimeSum=1
+SumSortOrder=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[DriverProfiling]
+Enabled=0
+Mode=3
+Graph=0
+Symbiont=0
+Exclusions=
+[CallStackLog]
+Enabled=0
+[CallStackStripe]
+ShowTiming=1
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\user\sdio_sdcard.c}.1616.2" 0 0 1 "" 0 "" 0
+Bp1=_ 0 "EMUL_CODE" "{$PROJ_DIR$\user\sdio_sdcard.c}.1247.3" 0 0 1 "" 0 "" 0
+Bp2=_ 0 "EMUL_CODE" "{$PROJ_DIR$\user\sdio_sdcard.c}.1240.3" 0 0 1 "" 0 "" 0
+Bp3=_ 0 "EMUL_CODE" "{$PROJ_DIR$\user\sdio_sdcard.c}.1254.3" 0 0 1 "" 0 "" 0
+Bp4=_ 0 "EMUL_CODE" "{$PROJ_DIR$\EMWIN\Demo\demo.c}.13.2" 0 0 1 "" 0 "" 0
+Bp5=_ 0 "EMUL_CODE" "{$PROJ_DIR$\FATFS\option\cc936.c}.1.1" 0 0 1 "" 0 "" 0
+Count=6
+[Aliases]
+A0=_ "C:\Users\god\Desktop\LWIP-UCOSIII\UCOS-III\uC-CPU\ARM-Cortex-M4\IAR\cpu_a.asm" ""
+A1=_ "C:\Users\god\Desktop\LWIP-UCOSIII\UCOS-III\uCOS-III\Ports\ARM-Cortex-M4\Generic\IAR\os_cpu_a.asm" ""
+A2=_ "C:\Users\god\Desktop\stemwin IAR\UCOS-III\uC-CPU\ARM-Cortex-M4\IAR\cpu_a.asm" ""
+A3=_ "C:\Users\god\Desktop\stemwin IAR\user\main.c" ""
+Count=4
+SuppressDialog=0
